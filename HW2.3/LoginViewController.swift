@@ -10,6 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,5 +23,9 @@ class LoginViewController: UIViewController {
                welcomeVC.userName = userNameTF.text
            }
     
-
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let _ = segue.source as? WelcomeViewController else { return }
+                userNameTF.text = ""
+                passwordTF.text = ""
+            }
 }

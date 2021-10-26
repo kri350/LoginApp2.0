@@ -68,6 +68,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordTF" destination="LDI-Xh-Yut" id="cZd-sS-15I"/>
                         <outlet property="userNameTF" destination="4LX-49-dp9" id="DbD-lk-V7t"/>
                     </connections>
                 </viewController>
@@ -102,6 +103,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutPressed" destination="ZPJ-Pu-MXt" eventType="touchUpInside" id="teW-hD-nrF"/>
+                                    <segue destination="n95-b0-OJv" kind="unwind" unwindAction="unwindFor:" id="zIN-Gd-CCp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,6 +121,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ny9-fN-Ys2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="n95-b0-OJv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="704.34782608695662" y="69.642857142857139"/>
         </scene>
