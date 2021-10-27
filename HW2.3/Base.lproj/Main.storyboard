@@ -43,11 +43,17 @@
                                 <rect key="frame" x="20" y="488" width="150" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
+                                <connections>
+                                    <action selector="userNameHint" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQq-W3-BRH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-bl-DfL">
                                 <rect key="frame" x="254" y="488" width="140" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="passwordHint" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZAo-4e-gjB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

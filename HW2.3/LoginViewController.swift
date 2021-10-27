@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
     }
     @IBAction func loginButtonPressed() {
         guard userNameTF.text == userNameValue, passwordTF.text == passwordValue
@@ -26,6 +24,14 @@ class LoginViewController: UIViewController {
             showAlert(title: "Invalid Username or Password", message: "Please try again")
         return
         }
+    }
+    
+    @IBAction func userNameHint() {
+        showAlert(title: "Hint", message: "Nikita")
+    }
+    
+    @IBAction func passwordHint() {
+        showAlert(title: "Hint", message: "1234")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,4 +51,6 @@ class LoginViewController: UIViewController {
             alert.addAction(okAction)
             present(alert, animated: true)
             }
+    
+    
 }
