@@ -12,10 +12,20 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    let userNameValue = "Nikita"
+    let passwordValue = "1234"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     
+    }
+    @IBAction func loginButtonPressed() {
+        guard userNameTF.text == userNameValue, passwordTF.text == passwordValue
+        else {
+            showAlert(title: "Invalid Username or Password", message: "Please try again")
+        return
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,4 +38,11 @@ class LoginViewController: UIViewController {
                 userNameTF.text = ""
                 passwordTF.text = ""
             }
+    
+    func showAlert (title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true)
+            }
 }
