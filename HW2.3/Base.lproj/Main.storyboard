@@ -22,15 +22,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ugx-1t-XQH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rxj-7c-ya4"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LDI-Xh-Yut">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LDI-Xh-Yut">
                                 <rect key="frame" x="40" y="362" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IL9-pF-Bfr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3SD-oF-Gqo"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1r-w8-CTE">
@@ -42,7 +42,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgj-kA-VrG"/>
-                                    <segue destination="ZPJ-Pu-MXt" kind="presentation" id="E1Y-5l-IAr"/>
+                                    <segue destination="ZPJ-Pu-MXt" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="E1Y-5l-IAr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdG-s5-lCj">
@@ -53,7 +53,7 @@
                                     <action selector="userNameHint" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQq-W3-BRH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-bl-DfL">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-bl-DfL">
                                 <rect key="frame" x="254" y="488" width="140" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
@@ -94,28 +94,27 @@
             <objects>
                 <viewController id="ZPJ-Pu-MXt" customClass="WelcomeViewController" customModule="HW2_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WXw-JX-N6U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" id="Voe-lR-cSe">
-                                <rect key="frame" x="0.0" y="194" width="414" height="291"/>
+                                <rect key="frame" x="0.0" y="206" width="414" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, username!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjg-lG-M9H">
-                                <rect key="frame" x="74.5" y="137.5" width="265" height="31"/>
+                                <rect key="frame" x="74.5" y="150" width="265" height="31"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
                                 <color key="textColor" red="0.51153273809523814" green="0.82817625922671889" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBY-at-qlB">
-                                <rect key="frame" x="172" y="504.5" width="70" height="36"/>
+                                <rect key="frame" x="172" y="536" width="70" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutPressed" destination="ZPJ-Pu-MXt" eventType="touchUpInside" id="teW-hD-nrF"/>
                                     <segue destination="n95-b0-OJv" kind="unwind" unwindAction="unwindFor:" id="zIN-Gd-CCp"/>
                                 </connections>
                             </button>

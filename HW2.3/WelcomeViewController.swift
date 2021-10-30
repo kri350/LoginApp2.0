@@ -18,9 +18,6 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    @IBAction func logoutPressed() {
-        dismiss(animated: true)
-    }
     
    
 
