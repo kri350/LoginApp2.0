@@ -11,6 +11,8 @@ struct User {
     var userLogin: String
     var userPassword: String
     var profile: [Profile]
+    var taskList: Tasks
+    
 }
 
 struct Profile {
@@ -19,10 +21,10 @@ struct Profile {
     var userAge: String
     var userInfo: String
 }
-
-let user = User (userLogin: "User", userPassword: "Password", profile: [userProfile])
-let userProfile = Profile (userName: "Kristina", userLastname: "Andreeva", userAge: "34", userInfo: "Fraud analyst from Kazan")
-
-    
-
+enum Tasks: String {
+        case one = "Learn Swift"
+        case two = "Learn JAVA"
+    }
+let userOne = User (userLogin: "User", userPassword: "1234", profile: [userOneProfile], taskList: Tasks.one)
+let userOneProfile = Profile(userName: "Kristina", userLastname: "Andreeva", userAge: "34", userInfo: "Fraud analyst from Kazan")
 

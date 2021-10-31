@@ -12,18 +12,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userLoginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    
     @IBAction func loginButtonPressed() {
-        guard userLoginTF.text == user.userLogin, passwordTF.text == user.userPassword
+        guard userLoginTF.text == userOne.userLogin, passwordTF.text == userOne.userPassword
         else {
             showAlert(title: "Invalid login or password", message: "Please try again", textField: passwordTF)
         return
         }
     }
     @IBAction func userNameHint() {
-        showAlert(title: "Hint", message: "User")
+        showAlert(title: "Hint", message: "\(userOne.userLogin)")
     }
     @IBAction func passwordHint() {
-        showAlert(title: "Hint", message: "Password")
+        showAlert(title: "Hint", message: "\(userOne.userPassword)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -52,5 +53,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
             return true
         }
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let tabBarController = segue.destination as? UITabBarController
+//            else {
+//                return
+//            }
+//        guard let tabBarControllers = tabBarController.viewControllers
+//            else {
+//                return
+//            }
+//        for viewController in tabBarControllers {
+//            if let navigationVC = viewController as? UINavigationController {
+//                    let profileVC = navigationVC.topViewController as! ProfileViewController
+//              
+//        }
+//    }
 }
