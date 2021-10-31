@@ -8,7 +8,6 @@
 import UIKit
 
 class TaskViewController: UIViewController {
-    
     @IBOutlet var taskLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()

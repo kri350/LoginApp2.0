@@ -61,11 +61,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //        guard let tabBarControllers = tabBarController.viewControllers
 //            else {
 //                return
-//            }
-//        for viewController in tabBarControllers {
-//            if let navigationVC = viewController as? UINavigationController {
-//                    let profileVC = navigationVC.topViewController as! ProfileViewController
-//              
+//
+//        }
+//    for viewController in tabBarControllers {
+//        if let welcomeVC = viewController as? WelcomeViewController {
+//                welcomeVC.userProfile = currentUserProfile }
+//        else if let taskVC = viewController as? TaskViewController {
+//            taskVC.user = currentUser }
+//        else if let navigationVC = viewController as? UINavigationController {
+//                let profileVC = navigationVC.topViewController as! ProfileViewController
+//                profileVC.userProfile = currentUserProfile }
+//    }
+//}
 //        }
 //    }
 }
