@@ -10,9 +10,12 @@ import Foundation
 struct User {
     var userLogin: String
     var userPassword: String
-    var profile: [Profile]
+    var profile: Profile
     var taskList: Tasks
     
+    static func getUser() -> User {
+        User(userLogin: "User", userPassword: "1234", profile: Profile.getProfile(), taskList: Tasks.one)
+    }
 }
 
 struct Profile {
@@ -20,11 +23,12 @@ struct Profile {
     var userLastname: String
     var userAge: String
     var userInfo: String
+    
+    static func getProfile() -> Profile {
+        Profile(userName: "Kristina", userLastname: "Andreeva", userAge: "34", userInfo: "Fraud analyst from Kazan")
+    }
 }
 enum Tasks: String {
         case one = "Learn Swift"
         case two = "Learn JAVA"
     }
-let userOne = User (userLogin: "User", userPassword: "1234", profile: [userOneProfile], taskList: Tasks.one)
-let userOneProfile = Profile(userName: "Kristina", userLastname: "Andreeva", userAge: "34", userInfo: "Fraud analyst from Kazan")
-

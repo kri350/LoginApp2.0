@@ -8,9 +8,10 @@
 import UIKit
 
 class TaskViewController: UIViewController {
+    var user: User!
     @IBOutlet var taskLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        taskLabel.text = userOne.taskList.rawValue
+        taskLabel.text = user.taskList.rawValue
     }
 }

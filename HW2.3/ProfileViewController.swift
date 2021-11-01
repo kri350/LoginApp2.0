@@ -11,11 +11,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var infoLabel: UILabel!
+    var user: User!
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        nameLabel.text = "\(userOneProfile.userName) \(userOneProfile.userLastname)"
-        ageLabel.text = userOneProfile.userAge
-        infoLabel.text = userOneProfile.userInfo
+        nameLabel.text = "\(user.profile.userName) \(user.profile.userLastname)"
+        ageLabel.text = user.profile.userAge
+        infoLabel.text = user.profile.userInfo
     }
 }
